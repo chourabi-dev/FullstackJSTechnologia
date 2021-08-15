@@ -1,0 +1,164 @@
+body{
+    margin: 0;
+}
+
+
+/* 12 col */
+
+.col { 
+    float: left;
+}
+
+.col-1{
+    width: 8.3333%;
+}
+
+.col-2{
+    width: 16.6666%;
+}
+
+.col-3{
+    width: 25%;
+}
+
+
+.col-4{
+    width: 33.3333%;
+}
+
+.col-5{
+    width: 41.666%;
+}
+
+.col-6{
+    width: 50%;
+}
+
+.col-7{
+    width: 58.333%;
+}
+
+.col-8{
+    width: 66.66666%;
+}
+
+.col-9{
+    width: 75%;
+}
+
+.col-10{
+    width: 83.333%;
+}
+
+.col-11{
+    width: 91.66666%;
+}
+
+.col-12{
+    width: 100%;
+}
+
+
+@media screen and (max-width:600px) {
+    .col{
+        width: 100% !important;
+    }
+}
+
+
+
+
+
+
+.bg-red{
+    background-color: red;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+
+
+
+/*events*/
+
+.my-div{
+    background-color: #ffeb3b;
+    padding: 25px;
+    margin: 25px;
+    border-radius: 7px;
+}
+
+.my-div > .my-p{
+    display: none;
+}
+.my-div:hover > .my-p {
+     display: block;
+}
+
+.my-div:hover > h1 {
+    display: none;
+}
+
+
+.dropdown{
+    width: 250px;
+    position: relative;
+}
+
+.drop-down-content{
+    display: none;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    left: 0;
+    top: 21px;
+    width: 100%;
+}
+
+.drop-down-content > li{
+    background-color: #ff9800;
+    padding: 10px;
+    width: 100%;
+
+}
+
+.dropdown:hover > .drop-down-content {
+    display: block;
+}
+
+.btn{
+    border: 0;
+    padding: 5px 15px 5px 15px;
+    /* background-color: #ffc107; */
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-primary{
+    color: white;
+    background-color: rgb(110, 110, 255);
+}
+
+.btn-success{
+    color: white;
+    background-color:#8bc34a;
+}
+
+
+.btn-shadow:hover{
+    box-shadow: 0px 0px 10px 1px #7c7c7c;
+}
+
+.btn-danger{
+    color: white;
+    background-color:#f44336;
+}
+
+.btn-circle{
+    border: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 29px;
+}

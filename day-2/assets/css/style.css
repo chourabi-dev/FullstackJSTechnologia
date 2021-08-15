@@ -1,0 +1,158 @@
+
+/*SELECTORS */
+/*tag name*/
+/*
+h1 {
+    color: blue !important;
+}
+
+
+
+h1{
+    color: yellow;
+}*/
+
+
+/*SELECT by id*/
+/*
+#my-title{
+    color: red !important;
+}*/
+
+
+
+/* classs*/
+/*
+.custom-title{
+    color: brown !important;
+}
+
+.custom-size{
+    font-size: 50px;
+}*/
+
+
+
+/*slect by attr*/
+/*
+input[type="text"]{
+    background-color: gray;
+}
+
+a[href^="https"]{
+    color: green;
+}
+
+a[href^="http"]{
+    color: red;
+}*/
+
+/* end with chars  => $*/
+
+/* text formatting**/
+/*p{  color: #2196f3;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    background-color: red;
+}
+
+
+a{
+    text-decoration: unset;
+    color: rgb(119, 0, 0);
+}
+
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+ul > li {
+    margin-bottom: 15px;
+    color: blueviolet;
+}*/
+
+
+
+body{
+    margin: 0;
+}
+
+
+.banner{
+    background-image: url(../img/bg.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner > div{
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    text-transform: capitalize;
+    padding-top: calc( (100vh / 2) - ( 92px / 2 ) );
+}
+
+
+.w-b{
+    background-color: #cddc39;
+    padding: 20px 30px 20px 30px;
+    margin: 15px;
+    border-radius: 7px;
+    color: #565656;
+}
+
+
+.table{
+    width: 70%;
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 25px;
+}
+
+.table> thead > tr{
+    background-color: #cddc39;
+}
+
+
+.table> thead > tr > th{
+    padding: 15px 20px;
+}
+
+
+.table > tbody>tr >td{
+    border-bottom: 1px solid rgb(48, 48, 48); 
+    padding: 15px 20px
+}
+
+.block{
+
+}
+
+
+.parent{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: black;
+}
+
+.child{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #cddc39;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+}

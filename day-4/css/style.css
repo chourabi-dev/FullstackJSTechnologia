@@ -1,0 +1,167 @@
+.alert{
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.alert-success{
+    background-color: #8bc34a;
+    color: green;
+}
+
+.alert-success{
+    background-color: #8bc34a;
+    color: green;
+}
+
+.alert-danger{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: #8a0900;
+}
+
+.badge{
+    background-color: #f44336;
+    padding: 9px;
+    border-radius: 13px;
+    color: white;
+}
+
+.connected-users{
+    height: 80px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.user{
+    height: 80px;
+    width: 80px;
+    position: relative;
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.connected {
+    background-color: #8bc34a;
+}
+
+.status {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    /* background-color: red; */
+    border-radius: 50%;
+    right: -11px;
+    top: -6px;
+    border: 8px solid white;
+}
+
+.not-connected {
+    background-color: #969696;
+}
+
+
+.square{
+    height: 50px;
+    background-color: #8a0900;
+    width: 50px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.square:hover{
+    height: 100vh; 
+    width: 100%;
+}
+
+.img-preview{
+    width: 100px;
+    height: 150px;
+    opacity: 0.4;
+}
+
+.img-preview:hover{
+    height: 100vh; 
+    width: 100%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+@keyframes intro {
+    0%{ left: -100%; }
+    100% { left: 0; }
+}
+
+
+.intro{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation: intro;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotate {
+    0% { transform: rotateZ(0deg); }
+    50% { transform: rotateZ(360deg); }
+    100% { transform: rotateZ(0deg); }
+    
+    
+}
+.spinner{
+    height: 100px;
+    width: 100px;
+    border: 10px solid;
+    border-radius: 50%;
+    border-bottom: 10px solid white;
+    border-top-color: red;
+    border-right-color: yellow;
+    
+    /*animation: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;*/
+
+    animation: rotate 3s   infinite ;
+    
+}
+
+.loader{
+    padding:15px;
+}
+
+
+@keyframes firstOne {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+    
+    
+}
+ 
+.loader > .puce{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.puce-one{
+  animation: firstOne 1s  infinite;  
+}
+
+.puce-two{
+  animation: firstOne 1s 0.2s infinite;  
+}
+
+.puce-three{
+  animation: firstOne 1s 0.4s infinite;  
+}
+
+.puce-four{
+  animation: firstOne 1s 0.6s infinite;  
+}
