@@ -1,0 +1,6 @@
+.chat-bubble{
+    max-width: 80%;
+    background-color: #ff9800;
+    padding: 15px;
+    border-radius: 30px;
+}
