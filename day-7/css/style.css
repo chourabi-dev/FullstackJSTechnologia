@@ -1,0 +1,31 @@
+.gallery{
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+body{
+    margin: 0;
+}
+
+#btn-next{
+    border: 0;
+    border-radius: 50%;
+    padding: 9px;
+    background-color: #90909078;
+    position: absolute;
+    top: 48%;
+    right: 0;
+    color: white;
+}
+
+
+#btn-previous{
+    border: 0;
+    border-radius: 50%;
+    padding: 9px;
+    background-color: #90909078;
+    position: absolute;
+    top: 48%;
+    left: 0;
+    color: white;
+}
