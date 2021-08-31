@@ -11,3 +11,8 @@ npm start
 ** add react router
 
 npm install react-router-dom
+
+
+** download api test software ** 
+
+https://www.postman.com/downloads/
