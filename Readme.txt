@@ -16,3 +16,9 @@ npm install react-router-dom
 ** download api test software ** 
 
 https://www.postman.com/downloads/
+
+
+
+** add cors to server **
+
+npm i cors
