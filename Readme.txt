@@ -22,3 +22,7 @@ https://www.postman.com/downloads/
 ** add cors to server **
 
 npm i cors
+
+
+** add jwt ** 
+npm i jsonwebtoken
