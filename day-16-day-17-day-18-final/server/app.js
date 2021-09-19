@@ -5,7 +5,8 @@ var jwt = require('jsonwebtoken');
 
 const cors = require('cors');
 const { createAccount, signInWithUsernameAndPassword } = require('./my-modules/auth');
-const { createVehicule, ListVehicules } = require('./my-modules/vehicules');
+const { createVehicule, ListVehicules, VehiculesDelete, finById, updateVehicule } = require('./my-modules/vehicules');
+const { createIntevention, findByVehiculeId } = require('./my-modules/Intervention');
 
 app.use(cors());
 
@@ -90,17 +91,38 @@ app.post('/api/vehicules/add',(req,res)=>{
 
 
 app.post('/api/vehicules/update',(req,res)=>{
-   
+  updateVehicule(req,res);
 })
 
 app.post('/api/vehicules/delete',(req,res)=>{
-  
+    VehiculesDelete(req,res);
+})
+
+
+app.post('/api/vehicules/intervention/add',(req,res)=>{
+  createIntevention(req,res);
 })
 
 
 app.get('/api/vehicules/list',(req,res)=>{
   ListVehicules(req,res);
 })
+
+app.get('/api/vehicules/details',(req,res)=>{
+  finById(req,res);
+})
+
+
+app.get('/api/vehicules/inteventions/list',(req,res)=>{
+  findByVehiculeId(req,res);
+})
+
+
+
+
+ 
+
+
 
 
 

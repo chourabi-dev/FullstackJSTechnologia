@@ -51,7 +51,47 @@ exports.createVehicule = function (req, res) {
 }
 
 
+exports.finById = function (req,res){
+    
+    const query  = url.parse(req.url,true).query;
+
+    console.log(query);
+
+    let filter = {}
+
+    if (query.id != null) {
+        filter._id  =  ObjectId(query.id)
+    }
+
  
+
+    console.log(filter);
+
+    var MongoClient = require('mongodb').MongoClient;
+
+    // url connection 
+    MongoClient.connect(urlDatabase).then((db) => {
+        //...
+        console.log("DATABASE CONNECTED");
+
+        // 
+        var database = db.db('technologiaDB');
+
+
+        // { key : value }
+        database.collection('vehicules').findOne( filter ).then((result)=>{
+            res.send({ success: true, data: result });
+        }).catch((err)=>{
+            res.send({ success: false, message: "Something went wrong" });
+        })
+
+
+
+    }).catch((err) => {
+        // 
+        res.send({ success: false, message: "Something went wrong" });
+    })
+}
 
 
 exports.ListVehicules = function (req, res) {
@@ -119,11 +159,22 @@ exports.updateVehicule = function (req, res) {
 
  
                 // update one
-                /*database.collection('fruits').updateOne ( { _id:ObjectId(jsonVehicule.id) } , { $set: {  } } ).then((data) => {
-                    res.send({ success: true, message: "fruit updated successfully !!" });
+                database.collection('vehicules').updateOne ( { _id:ObjectId(jsonVehicule.id) } , { $set: { 
+                    marque:jsonVehicule.marque,
+  
+                    "model":jsonVehicule.model,
+                    "pf":jsonVehicule.pf,
+                    "color":jsonVehicule.color,
+                    "registrationPlate":jsonVehicule.registrationPlate,
+                    "cinOwner":jsonVehicule.cinOwner,
+                    "fullnameOwner":jsonVehicule.fullnameOwner
+
+
+                 } } ).then((data) => {
+                    res.send({ success: true, message: "vehicule updated successfully !!" });
                 }).catch((err) => {
-                    res.send({ success: false, message: "Could't insert the fruit data" });
-                })*/
+                    res.send({ success: false, message: "Could't update the vehicule data" });
+                })
                 
 
 
@@ -155,7 +206,6 @@ exports.VehiculesDelete = function (req, res) {
         let jsonVehicule;
         try {
             jsonVehicule = JSON.parse(textData);
-
  
 
             // insert DATABASE 
@@ -168,9 +218,7 @@ exports.VehiculesDelete = function (req, res) {
                 console.log("DATABASE CONNECTED");
 
                 // 
-                var database = db.db('technologiaDB');
-
- 
+                var database = db.db('technologiaDB'); 
                 
                 // update one
                 database.collection('vehicules').deleteOne ( { _id:ObjectId(jsonVehicule.id) } ).then((data) => {
